@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactDetails } from "../lib/contact";
 import { navLinks, siteName } from "../lib/nav";
 
 export function Footer() {
@@ -31,9 +32,32 @@ export function Footer() {
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-steel">Connect</p>
           <ul className="mt-4 space-y-2 text-sm text-muted">
-            <li>Email — coming soon</li>
-            <li>Phone — coming soon</li>
-            <li>Socials — coming soon</li>
+            <li>
+              <a
+                href={contactDetails.emailHref}
+                className="transition hover:text-foreground"
+              >
+                {contactDetails.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={contactDetails.phoneHref}
+                className="transition hover:text-foreground"
+              >
+                {contactDetails.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={contactDetails.instagram.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-foreground"
+              >
+                Instagram — @{contactDetails.instagram.handle}
+              </a>
+            </li>
           </ul>
           <Link
             href="/contact"
