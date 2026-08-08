@@ -67,7 +67,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="hidden rounded-sm border border-silver/30 bg-silver/5 px-4 py-2 text-sm text-silver transition hover:border-steel hover:bg-steel/10 hover:text-foreground sm:inline-flex"
+            className="hidden rounded-sm bg-steel px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-[#3a58a0] sm:inline-flex"
           >
             Contact us
           </Link>
@@ -117,7 +117,7 @@ export function Header() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex justify-center rounded-sm border border-silver/30 px-4 py-3 text-sm text-silver"
+            className="mt-4 inline-flex justify-center rounded-sm bg-steel px-4 py-3 text-sm font-semibold text-foreground"
           >
             Contact us
           </Link>

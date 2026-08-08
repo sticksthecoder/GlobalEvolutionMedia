@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Montserrat, Source_Sans_3 } from "next/font/google";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { siteName, siteTagline } from "../lib/nav";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
+const display = Montserrat({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["600", "700"],
 });
 
-const body = Manrope({
+const body = Source_Sans_3({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {

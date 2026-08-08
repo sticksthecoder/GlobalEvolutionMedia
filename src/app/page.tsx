@@ -62,7 +62,7 @@ export default function HomePage() {
           <Reveal delay={0.1}>
             <Link
               href="/contact"
-              className="inline-flex rounded-sm bg-silver px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground"
+              className="inline-flex rounded-sm bg-steel px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-[#3a58a0]"
             >
               Contact us
             </Link>

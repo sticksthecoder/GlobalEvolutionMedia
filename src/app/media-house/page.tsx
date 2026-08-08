@@ -127,7 +127,7 @@ export default function MediaHousePage() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex shrink-0 rounded-sm border border-silver/35 px-6 py-3 text-sm text-silver transition hover:border-steel hover:text-foreground"
+              className="inline-flex shrink-0 rounded-sm bg-steel px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-[#3a58a0]"
             >
               Contact the media house
             </Link>

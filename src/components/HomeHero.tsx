@@ -9,11 +9,10 @@ export function HomeHero() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+    <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 grid-texture opacity-70" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center px-5 pb-20 pt-32 text-center md:px-8 md:pt-36">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center px-5 pb-14 pt-32 text-center md:px-8 md:pb-16 md:pt-36">
         <motion.div
           className="relative mb-8 h-40 w-full max-w-xl md:mb-10 md:h-52 md:max-w-2xl"
           initial={reduce ? false : { opacity: 0, y: 24 }}
@@ -57,18 +56,45 @@ export function HomeHero() {
         >
           <Link
             href="/about"
-            className="rounded-sm bg-silver px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground"
+            className="rounded-sm bg-steel px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-[#3a58a0]"
           >
             Discover GEM
           </Link>
           <Link
             href="/contact"
-            className="rounded-sm border border-silver/35 px-6 py-3 text-sm text-silver transition hover:border-steel hover:text-foreground"
+            className="rounded-sm border border-silver/40 px-6 py-3 text-sm text-silver transition hover:border-steel hover:text-foreground"
           >
             Work with us
           </Link>
         </motion.div>
       </div>
+
+      {/* Swap this block for the final hero visual when ready */}
+      <motion.div
+        className="relative w-full"
+        initial={reduce ? false : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div
+          className="relative flex min-h-[42vh] w-full items-center justify-center overflow-hidden border-y border-line bg-surface md:min-h-[52vh]"
+          aria-label="Hero visual placeholder"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 opacity-60"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(45, 69, 123, 0.35), transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #000000 100%)",
+            }}
+          />
+          <div className="pointer-events-none absolute inset-0 grid-texture opacity-40" />
+          <div className="relative z-10 px-6 text-center">
+            <p className="text-xs uppercase tracking-[0.28em] text-steel">Visual</p>
+            <p className="font-display mt-3 text-xl text-silver md:text-2xl">Coming soon</p>
+            <p className="mt-2 text-sm text-muted">Hero imagery will appear here</p>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

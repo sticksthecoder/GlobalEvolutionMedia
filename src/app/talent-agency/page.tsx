@@ -66,7 +66,7 @@ export default function TalentAgencyPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex rounded-sm bg-silver px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground"
+            className="mt-8 inline-flex rounded-sm bg-steel px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-[#3a58a0]"
           >
             Start a conversation
           </Link>
