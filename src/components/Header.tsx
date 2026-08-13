@@ -33,7 +33,7 @@ export function Header() {
           className="relative block h-10 w-36 shrink-0 md:h-12 md:w-44"
         >
           <Image
-            src="/brand/logo.png"
+            src="/brand/logo.jpeg"
             alt="Global Evolution Media"
             fill
             className="object-contain object-left"

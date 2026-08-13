@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "../../components/PageHero";
 import { Reveal } from "../../components/Reveal";
+import { VisualPlaceholder } from "../../components/VisualPlaceholder";
 
 export const metadata: Metadata = {
   title: "Media House",
@@ -58,6 +59,31 @@ export default function MediaHousePage() {
         title="Stories made to be seen."
         description="From concept to campaign, GEM delivers content creation, video production and brand solutions that help businesses and talent stand out."
       />
+
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.28em] text-steel">Selected work</p>
+            <h2 className="font-display mt-4 max-w-2xl text-3xl tracking-wide text-foreground md:text-4xl">
+              Visuals coming soon
+            </h2>
+            <p className="mt-4 max-w-2xl text-muted leading-relaxed">
+              Campaign stills, production frames, and brand work will live here.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {["01", "02", "03"].map((slot, index) => (
+              <Reveal key={slot} delay={index * 0.06}>
+                <VisualPlaceholder
+                  label={`Visual ${slot}`}
+                  caption="Coming soon"
+                  className="aspect-[4/5] w-full"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
         <Reveal>
