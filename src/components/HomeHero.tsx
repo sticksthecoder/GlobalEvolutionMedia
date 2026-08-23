@@ -69,30 +69,23 @@ export function HomeHero() {
         </motion.div>
       </div>
 
-      {/* Swap this block for the final hero visual when ready */}
       <motion.div
         className="relative w-full"
         initial={reduce ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div
-          className="relative flex min-h-[42vh] w-full items-center justify-center overflow-hidden border-y border-line bg-surface md:min-h-[52vh]"
-          aria-label="Hero visual placeholder"
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-60"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(45, 69, 123, 0.35), transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #000000 100%)",
-            }}
+        <div className="relative min-h-[42vh] w-full overflow-hidden border-y border-line bg-background md:min-h-[52vh]">
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/videos/visual1.mp4"
+            autoPlay={!reduce}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="GEM Network hero visual"
           />
-          <div className="pointer-events-none absolute inset-0 grid-texture opacity-40" />
-          <div className="relative z-10 px-6 text-center">
-            <p className="text-xs uppercase tracking-[0.28em] text-steel">Visual</p>
-            <p className="font-display mt-3 text-xl text-silver md:text-2xl">Coming soon</p>
-            <p className="mt-2 text-sm text-muted">Hero imagery will appear here</p>
-          </div>
         </div>
       </motion.div>
     </section>
